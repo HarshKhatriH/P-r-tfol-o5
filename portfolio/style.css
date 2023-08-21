@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.wrapper{
+    /* flex-wrap: wrap; */
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* border: 1px solid black; */
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.nav-bar{
+    padding-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid skyblue; */
+    align-items: center;
+
+}
+
+.nav-left{
+    display: flex;
+    /* border: 1px solid green; */
+}
+
+.logo-j{
+    width: 60px;
+}
+
+.logo-txt{
+    /* border: 5px solid skyblue; */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-left: -15px;
+}
+
+.nav-right {
+    display: flex;
+    /* border: 1px solid green; */
+    gap: 3rem;  
+    padding: 0 50px;  
+}
+
+.nav-right div a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-right div:hover{
+    transition: 0.8s all;
+    font-weight: 600;
+}
+
+.hero-section{
+    /* border: 5px solid red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin: 4rem auto;
+}
+
+.hero-section-left{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-section-para{
+    width: 70%;
+}
+
+.hero-section-heading{
+    font-size: 35px;
+}
+
+.hire-me{
+    border: 2px solid red;
+    font-size: 25px;
+    padding: 10px 15px;
+    color: white;
+    background-color: red;
+    position: relative;
+    z-index: 1;
+}
+
+.hire-me::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.8s;
+    z-index: -1;
+}
+.hire-me:hover::before{
+    transform: scaleX(1);
+}
+.hire-me:hover{
+    color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.hero-section-right{
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.absolute{
+    position: absolute;
+}
+
+.icon-user-image {
+    z-index: -1;
+    padding: 2em;
+    transition: all 2s;
+    animation: User-Img 5s linear infinite;
+}
+
+@keyframes User-Img{
+  
+    0%{
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+    50%{
+        transform: scale(1.1);
+        box-shadow: 2px 2px 2px 2px black;
+        filter: grayscale(1);
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(0);
+
+    }
+}
+
+.icon-dot{
+    z-index: 1;
+    bottom: 0px;
+    right: 0px;
+    transition: all 2s;
+    animation: Icon-Dot 5s linear infinite ;
+}
+
+@keyframes Icon-Dot{
+    50%{
+        transform: translateY(30px);
+        /* bottom: -50px; */
+     }
+  
+}
+
+.icon-cube{
+    z-index: 1;
+    right: 20px;
+    transform: all 2s;
+    animation: Icon-Cube 5s linear infinite;
+}
+
+@keyframes Icon-Cube {
+    0%{
+        transform: translateY(0px) ;
+    }
+    50%{
+        transform: translateY(-50px) rotateY(180deg);
+    }
+    100%{
+        transform: translateY(0px) rotateY(360deg) ;
+    }
+    
+}
+
+.icon-circle{
+    z-index: 1;
+    bottom: 0px;
+    transform: all 2s;
+    animation: Icon-Circle 5s linear infinite;
+}
+
+@keyframes Icon-Circle {
+    0%{
+        left: -10px;
+        bottom: -10px;
+    }
+    50%{
+        left: 30px;
+        bottom: 30px;
+    }
+    100%{
+        left: -10px;
+        bottom: -10px;
+    }
+}
+
+.icon-zigzak{
+    z-index: 1;
+    top: 0;
+    transform: all 2s;
+    animation: Icon-Zigzak 5s linear infinite;
+}
+
+@keyframes Icon-Zigzak{
+    50%{
+        transform: translateX(20px);
+     }
+}
+
+.icon-plus{
+    z-index: 1;
+    right: 50%;
+    transform: all 2s;
+    animation: Icon-Plus 5s linear infinite;
+}
+
+@keyframes Icon-Plus{
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+.faded-txt{
+    position: absolute;
+    font-size: 100px;
+    bottom: -90px;
+    left: 0px;
+   user-select: none;
+   color: antiquewhite;
+}
+
+.project-section{
+    background-color:rgb(231,231,231)
+}
+
+.project-heading{
+    font-size: 90px;
+    color: red;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.project-main{
+    width: 1200px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8em;
+}
+
+.project-card1{
+    position: relative;
+    width: 90%;
+    height: 550px;
+    /* border: 1px solid black; */
+    background-image: url("images/projects/Project1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 10px 10px 0px;
+    border-radius: 20px;
+    /* margin: 0px 0px 0px 10%; */
+}
+
+.project-card1::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+    border-radius: 20px;
+
+}
+
+.project-card1::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color:  rgba(47, 8, 84, 0.433);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index: 1;
+    border-radius: 20px;
+
+
+}
+
+.project-card1:hover::before{
+    transform: scaleX(1);
+}
+
+.num-1{
+    font-size: 200px;
+    position: absolute;
+    right: -60px;
+    top: -50px;
+    color: white;
+    transform: scale(0);
+    transition: all;
+    z-index: 10;
+}
+.project-card1:hover .num-1 {
+    transform: scale(1);
+}
+
+.for-hover{
+  position: relative;
+  transition: all 1s;
+  transform: scale(1);
+  /* background-color: yellow; */
+  height: 350px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+  top: 20%;
+  left: 15%;
+  z-index: 1;
+}
+
+.project-card1:hover .for-hover{
+    transform: scale(1.1);
+}
+
+
+ .project-skill{
+   width: 450px;
+}
+
+.project-skill-part{
+    width: 50px;
+    height: 50px;
+}
+
+.tint-orange{
+    font-size: 60px ;
+    color: white;
+}
+
+.card-para{
+    color: white;
+    margin-bottom: 10px;
+}
+
+#project-card2{
+    /* position: relative; */
+    background-image: url(images/projects/Project2.png);
+    background-size: cover;
+    margin-left: 10%;
+}
+
+#project-card3{
+    background-image: url(images/projects/Project3.png);
+    background-size: cover;
+   
+}
+
+#project-card4{
+    /* position: relative; */
+     background-image: url(images/projects/Project4.png);
+    background-size: cover;
+    margin-left: 10%;
+
+   
+}
+
+.num-2{
+    top: -50px;
+    left: -30px;
+    font-size: 200px;
+    position: absolute;
+    color: white;
+    transform: scale(0);
+    transition: all;
+    z-index: 10;
+}
+#project-card2:hover .num-2 {
+    transform: scale(1);
+}
+
+#project-card4:hover .num-2 {
+    transform: scale(1);
+}
+
+#for-hover-2{
+    /* background-color: yellow; */
+    top: 30%;
+    left: 44%;  
+  
+}
+ 
+.skills-box{
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 100%;
+}
+
+.skills-container{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.skills-container-left{
+    width: 50%;
+    padding-left: 100px;
+    /* border: 1px solid red; */
+    /* border: 1px solid green; */
+}
+
+.skills-heading-part{
+    font-size: 70px;
+    color: red;
+}
+.skills-container-heading{
+    font-size: 40px;
+    color: red;
+}
+.skills-para{
+    width: 80%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+}
+
+.skills-container-right{
+    width: 50%;
+    /* border: 1px solid green; */
+    position: relative;
+    padding-right: 100px;
+
+}
+
+.skills-back-logo{
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    /* color: blueviolet; */
+    top: 90px;
+    left: 80px;
+    animation: skills-back-logo 5s linear infinite;
+    transition: all 2s;
+}
+
+@keyframes skills-back-logo{
+    50%{
+        top: 50px;
+        left: 100px;
+    }
+}
+
+.skills-logo{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    transition: 1s;
+
+}
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.skills-feded-txt{
+    position: absolute;
+    font-size: 200px;
+    text-decoration:none;
+    bottom: -50px;
+    right: -100px;
+    color: rgb(209, 209, 205);
+}
+
+.feedback-box{
+    width: 100%;
+    background-color: rgb(209, 209, 205);
+}
+
+.feedback-container{
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.feedback-heading{
+    margin-left: 100px;
+    font-size: 80px;
+    color: red;
+}
+
+.feedback-subheading{
+    margin-left: 100px;
+    font-size: 50px;
+    color: rgb(54, 182, 233);
+    text-transform: capitalize;
+}
+
+.feedback-form-box{
+    width: 70%;
+    /* border: 1px solid black; */
+    margin-left: 20% ; 
+}
+
+.feedback-form-container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.form-filed{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1em black;
+}
+
+.form-message{
+    /* height: 30px; */
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1em black;
+    margin-bottom: 20px;
+}
+
+.send-btn{
+    margin: 20px;
+    margin-bottom: 50px;
+}
